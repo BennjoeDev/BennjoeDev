@@ -1,0 +1,123 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Poppins;
+}
+.background {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(51, 51, 51);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  flex-direction: row;
+}
+.logo {
+  padding: 3px;
+  width: 100px;
+}
+.title-text {
+  font-size: 30px;
+  color: #fff;
+  text-align: left;
+  flex: 1;
+  text-decoration: none;
+  padding-left: 50px;
+  font-weight: bold;
+  padding-left: 30px;
+}
+.nav-links {
+  flex: 2;
+  text-align: right;
+  padding: 10px;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.text-box {
+  z-index: 2;
+  width: 90%;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-size: 62px;
+}
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 25px;
+  color: #fff;
+}
+.button {
+  display: inline-block;
+  border: 1px solid white;
+  background-color: transparent;
+  font-size: 13px;
+  padding: 12px 34px;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  color: white;
+}
+.button:hover {
+  border: 1px solid rgba(23, 0, 66, 0.7);
+  background: rgba(23, 0, 66, 0.7);
+  transition: 1s;
+}
+.mobile-menu-button img {
+  width: 100px;
+  flex: 1;
+  padding: 10px;
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .text-box h1 {
+    font-size: 30px;
+  }
+  .nav-links ul {
+    display: none;
+  }
+  .text-box p {
+    font-size: 10px;
+  }
+  .mobile-menu-button img {
+    display: block;
+    width: 80px;
+  }
+  .logo {
+    width: 80px;
+  }
+  .title-text {
+    font-size: 20px;
+  }
+}
